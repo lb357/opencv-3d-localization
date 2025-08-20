@@ -1,0 +1,14 @@
+%YAML:1.0
+---
+ArUcoDict_DICT_3X3_RX_EURO:
+   nmarkers: 8
+   markersize: 3
+   maxCorrectionBits: 0
+   marker_0: "111010010"
+   marker_1: "101111010"
+   marker_2: "111000101"
+   marker_3: "111111010"
+   marker_4: "100111110"
+   marker_5: "111100100"
+   marker_6: "111101000"
+   marker_7: "100001011"
