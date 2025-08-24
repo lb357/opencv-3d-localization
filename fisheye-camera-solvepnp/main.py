@@ -51,7 +51,7 @@ if __name__ == "__main__":
                 position, mat = re3d.positionMarker(cornersx, ARUCO_SIZE, cameraMatrix)
                 # Рассчёт позиции ArUco маркера (смотри re3d.py)
                 x, y, z = position[0] # Координаты
-                rx, ry, rz = map(np.degrees, position[1]) # Углы
+                rx, ry, rz = map(np.degrees, position[1]) # Углы Эйлера
                 rvec, tvec = mat # rvec, tvec (для отрисовки осей ArUco маркера)
                 img = cv2.drawFrameAxes(img, cameraMatrix, np.array([]), rvec, tvec, 0.1, 5)
                 #Отрисовка осей ArUco маркера
@@ -69,10 +69,11 @@ if __name__ == "__main__":
                     [img_pos[0], img_pos[1]+20], cv2.FONT_HERSHEY_SIMPLEX,
                     0.4, (255, 0, 255), 2
                 )
-                # Отрисовка углов ArUco маркера на изображении
+                # Отрисовка углов Эйлера ArUco маркера на изображении
 
         cv2.imshow("Display", img) # Вывод на экран изображения
         
     cap.release()
     cv2.destroyAllWindows()
     # Закрытие окон после завершения работы
+  
